@@ -9,7 +9,8 @@ class CloudinaryResponse {
   /// The [secureUrl] of the uploaded file (if any) (https)
   String? secureUrl;
 
-  /// The [secureUrl] of the uploaded file (if any) (https)
+  /// The [playbackUrl] of the uploaded file (if any) (m3u3) for
+  /// adaptive streaming
   String? playbackUrl;
 
 
