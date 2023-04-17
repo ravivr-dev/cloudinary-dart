@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloudinary/src/api_client/cloudinary_api.dart';
 import 'package:cloudinary/src/enums/cloudinary_resource_type.dart';
 import 'package:cloudinary/src/models/cloudinary_response.dart';
@@ -104,6 +106,7 @@ class CloudinaryApiClient extends CloudinaryApi {
         data: formData,
         onSendProgress: progressCallback,
       );
+      log(response.toString(), name: "Response CLOUDNARY");
       statusCode = response.statusCode;
       cloudinaryResponse = CloudinaryResponse.fromJsonMap(response.data);
     } catch (error, stacktrace) {
