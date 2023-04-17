@@ -9,6 +9,10 @@ class CloudinaryResponse {
   /// The [secureUrl] of the uploaded file (if any) (https)
   String? secureUrl;
 
+  /// The [secureUrl] of the uploaded file (if any) (https)
+  String? playbackUrl;
+
+
   /// The [url] of the uploaded file (if any) (http)
   String? url;
 
@@ -85,6 +89,7 @@ class CloudinaryResponse {
     this.error,
     this.deleted,
     this.partial,
+    this.playbackUrl,
   });
 
   /// Returns true if the response is ok and the file was uploaded successfully
@@ -109,6 +114,7 @@ class CloudinaryResponse {
         eTag = map['etag'],
         url = map['url'],
         secureUrl = map['secure_url'],
+        playbackUrl = map['playback_url'],
         signature = map['signature'],
         originalFilename = map['original_filename'],
         result = map['result'] ?? 'ok',
@@ -139,5 +145,6 @@ class CloudinaryResponse {
         'result': result,
         'deleted': deleted,
         'partial': partial,
+        'playback_url' : playbackUrl,
       };
 }
