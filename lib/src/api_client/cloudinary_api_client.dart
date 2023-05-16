@@ -102,7 +102,7 @@ class CloudinaryApiClient extends CloudinaryApi {
     CloudinaryResponse cloudinaryResponse;
     try {
       response = await post(
-        '$cloudName/${resourceType.name}/upload/q_auto',
+        '$cloudName/${resourceType.name}/upload/q_auto:eco',
         data: formData,
         onSendProgress: progressCallback,
       );
